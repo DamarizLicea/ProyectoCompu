@@ -1,5 +1,7 @@
 # ProyectoDamarizLiceaA01369045_TC1028.1
+
 PROYECTO PENSAMIENTO COMPUTACIONAL&KEIKIZ
+
 Proyecto en base a crear una plataforma de ordenes/cotizaciones de pasteles de mi marca (Keikiz), y guardar además la cantidad de dinero que entra/sale.
 
 Planeada para desplegar un menú inicial que presente las diferentes opciones con las que se puede trabajar (1. Comprar en el menú del día (mini menú variable), 2. Hacer una cotización de postre o pastel (se despliega un mini menú interior de sabores), 3. Hacer un pedido (también se despliega mini menú),4. Opción de corte de caja/retiro del efectivo).

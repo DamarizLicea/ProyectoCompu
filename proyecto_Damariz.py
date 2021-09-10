@@ -9,7 +9,7 @@ def menu2():
     print("Hola! Bienvenido a Keikiz, nuestro menú por rebanadas para hoy es éste: \n1)Tarta de nuez $20 \n2)Pastel de miel $40 \n3)Pastel de rollo $35 \n4)Pastel de Brownie $30 \n5)Cheesecake de pera $45 \n6)Pay de manzana $45")
 def venta_directa():
     menu2()
-    producto=int(input("¿Qué va a querer?"))
+    producto=int(input("¿Qué va a querer?")) """amigo becario, aquí empieza mi entrega de if's para el 10/09/2021"""
     if producto==1:
         valor=20
     if producto==2:

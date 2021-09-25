@@ -37,47 +37,66 @@ def precioventa(producto,rebanadas):
     return producto*rebanadas
 def calcular_precio(personas):
     return personas*60+(personas*4)+45+((personas+60/2))
-def contento():
-    repono=str(input(("¿Se encuentra satisfecho con su orden? Indiquenos Sí o No: ")))
 def imprimir_orden(sabor,crema,deco):
-    print("usted pidio un pastel sabor ",sabor,",con crema de ",crema," y decoración de ",deco)
+    print("Usted pidio un pastel sabor ",sabor.lower(),",con crema de ",crema.lower()," y decoración de ",deco.lower())
 """
 ===============================================================================AQUÍ YA CORRE EL PROGRAMA===========================================================================
 """
 h=int(input(print("Hola! ¿Qué te gustaría hacer? \n1)Registrar una venta \n2)Cotizar una orden \n3)Hacer un pedido \n4)Corte de caja")))
-if h==1:
-    
-    precioventa()
-if h==2:
-    print("Hola, bienvenido a nuestro sistema de cotizaciones")
-    menu1()
-    sabor=(str(input("¿Qué sabor de pan le interesa? ")))
-    personas=int(input("¿Para cuántas porciones sería? "))
-    crema=(str(input("¿Qué sabor de crema le interesa? ")))
-    deco=(str(input("¿Qué tipo de decoración le interesa? ")))
-    fecha=str(input())
-    print("Su costo es", calcular_precio(personas))
-    imprimir_orden(sabor,crema,deco)
-if h==3:
-    print("Hola, bienvenido a nuestro sistema de ordenes")
-    menu1()
-    sabor=(str(input("¿Qué sabor de pan le interesa? ")))
-    personas=int(input("¿Para cuántas porciones sería? "))
-    crema=(str(input("¿Qué sabor de crema le interesa? ")))
-    deco=(str(input("¿Qué tipo de decoración le interesa? ")))
-    print("Su costo es", calcular_precio(personas))
-    cuenta=calcular_precio(personas)
-    forma_de_pago=str(input("¿Su pago es en efectivo o tarjeta de crédito o tarjeta de débito? Si es efectivo, por favor escriba efectivo, si es tarjeta de crédito, por favor escriba credito, y si no es ninguna de las anteriores, escriba debito: "))
-    if forma_de_pago==("efectivo"):
-        valorventa=cuenta
-        print("gracias, vuelva pronto")
-    if forma_de_pago=="credito":
-        valorventa=cuenta+(cuenta*0.10)
-        print("Su cuenta final fue de $",valorventa,",gracias, vuelva pronto")
-    if forma_de_pago=="debito":
-        valorventa=cuenta+(cuenta*0.15)
-        print("Su cuenta final fue de $",valorventa,",gracias, vuelva pronto")
-    imprimir_orden(sabor,crema,deco)
-if h==4:
-    """amigo becario, todavia no hay nada programado para esta parte, gracias   :)"""
-    corte()
+while h!=5:
+    if h==1:
+        venta_directa()
+        rep=input("¿Desea seguir comprando?")
+        if rep=="si" or rep=="Si":
+            continue
+        else:
+            break
+    if h==2:
+        print("Hola, bienvenido a nuestro sistema de cotizaciones")
+        menu1()
+        sabor=(str(input("¿Qué sabor de pan le interesa? ")))
+        personas=int(input("¿Para cuántas porciones sería? "))
+        crema=(str(input("¿Qué sabor de crema le interesa? ")))
+        deco=(str(input("¿Qué tipo de decoración le interesa? ")))
+        print("Su costo es", calcular_precio(personas))
+        imprimir_orden(sabor,crema,deco)
+        rep=str(input(("¿Se encuentra satisfecho con su cotización? Indiquenos Sí o No: ")))
+        if rep=="No" or rep=="No":
+            continue
+        else:
+            break
+    if h==3:
+        print("Hola, bienvenido a nuestro sistema de ordenes")
+        menu1()
+        sabor=(str(input("¿Qué sabor de pan le interesa? ")))
+        personas=int(input("¿Para cuántas porciones sería? "))
+        crema=(str(input("¿Qué sabor de crema le interesa? ")))
+        deco=(str(input("¿Qué tipo de decoración le interesa? ")))
+        print("Su costo es", calcular_precio(personas))
+        cuenta=calcular_precio(personas)
+        imprimir_orden(sabor,crema,deco)
+        rep=str(input(("¿Se encuentra satisfecho con su orden? Indiquenos Sí o No: ")))
+        if rep=="no" or rep=="No":
+            continue
+        else:
+            forma_de_pago=str(input("¿Su pago es en efectivo o tarjeta de crédito o tarjeta de débito? Si es efectivo, por favor escriba efectivo, si es tarjeta de crédito, por favor escriba credito, y si no es ninguna de las anteriores, escriba debito: "))
+            if forma_de_pago==("efectivo"):
+                valorventa=cuenta
+                print("gracias, vuelva pronto")
+            if forma_de_pago=="credito":
+                valorventa=cuenta+(cuenta*0.10)
+                print("Su cuenta final fue de $",valorventa,",gracias, vuelva pronto")
+            if forma_de_pago=="debito":
+                valorventa=cuenta+(cuenta*0.15)
+                print("Su cuenta final fue de $",valorventa,",gracias, vuelva pronto")
+        imprimir_orden(sabor,crema,deco)
+        break
+    if h==4:
+        print("Todavia no hay nada aquí.")
+        rep=str(input(("¿Quieres cerrar el corte?")))
+        if rep=="si" or rep=="Si":
+            continue
+        else:
+            break
+else:
+    print("Hemos cerrado, ten una buena noche.")

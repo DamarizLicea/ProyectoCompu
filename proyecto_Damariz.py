@@ -2,9 +2,59 @@
 -------------------------------------------------------------------------funciones del programa-------------------------------------------------------------------------------------
 """
 def menu1():
-    print("Hola! Bienvenido a Keikiz, nuestro menú para ordenes de pasteles es éste: \n1)Red Velvet\n2)Zanahoria \n3)Gansito \n4)Chocolate Clásico \n5)Chai \n6)Vainilla \n7)Limón")
-    print("El menú de rellenos es éste: \n1)Buttercream de Vainilla \n2)Crema de queso \n3)Mermelada de frutos rojos \n4)Buttercream de chocolate \n5)Buttercream de PB \n6)Lemon Curd")
-    print("Nuestro menú para decoraciones es este: \n1)Fondant \n2)Chocolate \n3)Buttercream \n4)Moldeado")
+    print()
+    print("Hola! Bienvenido a Keikiz, nuestro menú para ordenes de pasteles es éste:")
+    lista_pan=[['1','Red Velvet'],
+              ['2','Zanahoria'],
+              ['3','Gansito'],
+              ['4','Chocolate Clásico'],
+              ['5','Chai'],
+              ['6','Vainilla'],
+              ['7','Limón']]
+    
+    def imprfor(lista_pan):
+        for linea in lista_pan:
+            for columna in linea:
+                print(columna,end=" ")
+            print()
+    imprfor(lista_pan)
+    print()
+    print("El menú de rellenos es éste:")
+    lista_relleno=[['1','Buttercream de Vainilla'],
+                   ['2','Crema de Queso'],
+                   ['3','Mermelada de frutos rojos'],
+                   ['4','Buttercream de chocolate'],
+                   ['5','Buttercream de PB'],
+                   ['6','Lemon Curd']]
+    def impwhile(lista_relleno):
+        valor=0
+        i=0
+        while i<len(lista_relleno):
+            j=0
+            while j<len(lista_relleno[0]):
+                print(lista_relleno[i][j],end=" ")
+                j=j+1
+            print()
+            i=i+1
+    impwhile(lista_relleno)
+    print()
+    print("Nuestro menú para decoraciones es este:")
+    listadeco=[['1','Fondant'],
+               ['2','Chocolate'],
+               ['3','Buttercream'],
+               ['4','Moldeado']]
+    def impwhile(listadeco):
+        valor=0
+        i=0
+        while i<len(listadeco):
+            j=0
+            while j<len(listadeco[0]):
+                print(listadeco[i][j],end=" ")
+                j=j+1
+            print()
+            i=i+1
+    impwhile(listadeco)
+    print()
 def menu2():
     print("Hola! Bienvenido a Keikiz, nuestro menú por rebanadas para hoy es éste: \n1)Tarta de nuez $20 \n2)Pastel de miel $40 \n3)Pastel de rollo $35 \n4)Pastel de Brownie $30 \n5)Cheesecake de pera $45 \n6)Pay de manzana $45")
 def venta_directa():

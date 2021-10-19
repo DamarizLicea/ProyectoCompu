@@ -158,28 +158,18 @@ while h<6 and h>0:
     
     if h==2:
         rep=""
-        print(f"{Fore.GREEN}Hola, bienvenido a nuestro sistema de cotizaciones")
-        menu1()
-        sabor=(str(input("¿Qué sabor de pan le interesa? ")))
-        personas=int(input("¿Para cuántas porciones sería? "))
-        crema=(str(input("¿Qué sabor de crema le interesa? ")))
-        deco=(str(input("¿Qué tipo de decoración le interesa? ")))
-        print("Su costo es", calcular_precio(personas))
-        imprimir_orden(sabor,crema,deco)
-        while rep!="No" and rep!="no":
-            rep=str(input(("¿Quiere volver a realizar su cotización? Indiquenos Sí o No: ")))
-            rep=""
-            print("Hola, bienvenido a nuestro sistema de cotizaciones")
-            menu1()
-            sabor=(str(input("¿Qué sabor de pan le interesa? ")))
-            personas=int(input("¿Para cuántas porciones sería? "))
-            crema=(str(input("¿Qué sabor de crema le interesa? ")))
-            deco=(str(input("¿Qué tipo de decoración le interesa? ")))
-            print("Su costo es", calcular_precio(personas))
-            imprimir_orden(sabor,crema,deco)
-            while rep!="No" and rep!="no":
-                rep=str(input(("¿Quiere volver a realizar su cotización? Indiquenos Sí o No: ")))
-
+	while rep!="No" and rep!="no":
+		print(f"{Fore.GREEN}Hola, bienvenido a nuestro sistema de cotizaciones")
+        	menu1()
+        	sabor=(str(input("¿Qué sabor de pan le interesa? ")))
+        	personas=int(input("¿Para cuántas porciones sería? "))
+        	crema=(str(input("¿Qué sabor de crema le interesa? ")))
+       		deco=(str(input("¿Qué tipo de decoración le interesa? ")))
+        	print("Su costo es", calcular_precio(personas))
+        	imprimir_orden(sabor,crema,deco)
+		rep=str(input(("¿Quiere volver a realizar su cotización? Indiquenos Sí o No: ")))
+    
+      
     if h==3:
         rep=""
         while rep!="Si" and rep!="si":

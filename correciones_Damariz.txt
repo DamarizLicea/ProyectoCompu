@@ -1,0 +1,92 @@
+﻿
+
+Proyecto Keikiz by Mayiz
+Damariz Licea Carrisoza A01369045
+Punto de venta, cotizador de órdenes para
+un negocio de pastelería.
+Despliega menú para venta regular de productos,
+permite cotizar una orden varias veces para que
+el cliente lo haga hasta estar contento.
+Después permite que el usuario haga la orden
+como tal de un pedido y le da opción de pagar.
+En el ultimo punto, es un contador de dinero
+segun el numero de monedas/billetes que el usuario ingrese.
+
+
+==================CORRECIONES=================
+
+Corrección 1. Avance 3.
+Sub Competencia:
+        Aplica estructuras condicionales para resolver un problema
+        
+Error original:
+
+        "El programa falla con la opcion 1 line 50, in <module> precioventa()
+        TypeError: precioventa() missing 2 required positional arguments: 'producto' and 'rebanadas'
+        y procura no usar caracteres no estandar que puedan cerrar las comillas acciedentalemente como 
+        """"""amigo becario, aquí empieza mi entrega de if's para el 10/09/2021"""""""
+
+Cambios realizados:
+
+        Eliminé la función precioventa, usé la variable "cuenta" para la opción dentro de h==1,
+	donde realizo la operación del producto del contenido de las variables valor*rebanadas.
+        Eliminé el comentario que estaba entre comillas.
+
+Líneas de código donde se ven los cambios:
+        192	Ahí está la variable "cuenta"
+        295 a 298 Ahí se ve que ya funciona.
+
+=================================================================================================================
+
+Corrección 2. Avance 4.
+Sub Competencia:
+        Aplica estructuras cíclicas para resolver un problema de manera eficiente.
+        
+Error original:
+        Buen uso de los ciclos, en la opción de cotización, el código solo te da opción a regresarte.	
+
+Cambios realizados:
+        Modifiqué el ciclo while, ahora ya pueden repetir el ciclo si no se encuentran contentos,
+        o salirse al menú principal si ya están contentos con la acción que realizaron.
+
+Líneas de código donde se ven los cambios:
+        309 a 318 Ciclo while que engloba todo el proceso de cotización.
+
+==================================================================================================================
+
+Corrección 3. Avance 5.
+Sub Competencia:
+        Usa la forma más a apropiada al problema para guardar los datos (listas, variable,
+        tipo de dato, etc...)
+        
+Error original:
+        Buen avance, al querer pagar e ingresar que se quiere pagar en efectivo, no te da el total.	.	
+
+Cambios realizados:
+        Había olvidado poner que también imprimiera la cuenta si la opción de pago era en efectivo, así que añadí
+        mi variable valorventa a la línea donde tenía el print que desplegaría el precio en efectivo. 
+
+Líneas de código donde se ven los cambios:
+        345 a 346 Ya imprime el costo también para esa opción.
+
+===================================================================================================================       
+
+Corrección 4. Avance 6.
+Sub Competencia:
+        Usa la forma más a apropiada al problema para guardar los datos (listas, variable, tipo de dato, etc...)
+        
+Error original:
+
+        Al correr el codigo, en la opcion 1 marca un error porque llamas a una funcion y no
+        pasas parametros. Aparte de esto, no estas usando ni listas ni matrices en el proyecto		
+
+Cambios realizados:
+
+        Sí usé matrices en la función menú 1. La función de la opción 1 ya está revisada
+        y corre bien, nuevamente confirmo que no lleva parámetros intencionalmente porque
+        no los necesita.
+
+Líneas de código donde se ven los cambios:
+        111 a 147 Uso de matrices/listas
+	168 a 210 Función venta_directa, totalmente funcional y sin parámetros
+

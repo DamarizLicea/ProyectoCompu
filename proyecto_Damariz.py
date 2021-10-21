@@ -14,7 +14,7 @@ segun el numero de monedas/billetes que el usuario ingrese.
 """
 """
 LAS CORRECIONES SE ENCUENTRAN EN UN DOCUMENTO DE TEXTO EN MI GITHUB,
-SE LLAMA "correciones_Damariz"
+SE LLAMA "correciones_Damariz FAVOR DE REVISARLAS PARA ENTREGA FINAL"
 """
 """
 ------------------funciones del programa-------------------
